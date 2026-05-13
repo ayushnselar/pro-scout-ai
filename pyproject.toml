@@ -1,0 +1,35 @@
+[project]
+name = "pro-scout-ai"
+version = "0.1.0"
+description = "Multi-agent fantasy basketball decision assistant (MVP)"
+readme = "walkthrough.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+src = ["agents", "graph", "frontend", "tests"]
+exclude = [
+    ".venv",
+    ".git",
+    ".pytest_cache",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "W",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Streamlit entrypoint must extend sys.path before first-party imports.
+"frontend/app.py" = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["agents", "graph"]
