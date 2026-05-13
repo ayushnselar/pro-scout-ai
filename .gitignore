@@ -1,0 +1,15 @@
+# Local secrets — never commit API keys
+.streamlit/secrets.toml
+**/.DS_Store
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
