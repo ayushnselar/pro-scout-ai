@@ -1,0 +1,15 @@
+# Pro-Scout AI — Streamlit configuration (STEP 10).
+#
+# Secrets (GROQ_API_KEY) are NOT defined in this file.
+# - Local: create `.streamlit/secrets.toml` (gitignored). Streamlit loads it automatically.
+# - Streamlit Cloud: Project Settings → Secrets → same TOML keys as below.
+#
+# Example secrets file (also see `secrets.toml.example` in this folder):
+
+[browser]
+gatherUsageStats = false
+
+[server]
+# Sensible defaults for local and hosted runs
+enableCORS = true
+enableXsrfProtection = true
